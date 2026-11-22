@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tab Debt</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body class="dashboard">
+  <header>
+    <div class="top">
+      <div id="stats">Loading…</div>
+    </div>
+    <div class="actions">
+      <button id="close-dupes" class="action" type="button" disabled>Close all duplicates</button>
+      <button id="discard-stale" class="action" type="button" disabled>Discard all stale</button>
+      <button id="archive-stale" class="action" type="button" disabled>Archive all stale</button>
+      <button id="undo" class="action" type="button" hidden>Undo</button>
+    </div>
+    <div id="status" role="status" aria-live="polite"></div>
+    <input id="search" type="search" placeholder="Search title or URL" autocomplete="off" autofocus>
+    <div class="filters">
+      <button type="button" class="toggle" data-filter="dupes" aria-pressed="false">Duplicates only</button>
+      <button type="button" class="toggle" data-filter="audio" aria-pressed="false">Playing audio</button>
+      <button type="button" class="toggle" data-filter="discarded" aria-pressed="false">Discarded</button>
+      <button type="button" class="toggle" data-filter="stale7" aria-pressed="false">7+ days</button>
+      <button type="button" class="toggle" data-filter="stale14" aria-pressed="false">14+ days</button>
+    </div>
+    <div class="filters">
+      <button type="button" class="toggle" data-sort="domain" aria-pressed="true">By domain</button>
+      <button type="button" class="toggle" data-sort="staleness" aria-pressed="false">By staleness</button>
+    </div>
+  </header>
+  <main id="list"></main>
+  <script src="tabs-core.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tab Debt</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div id="stats">Loading…</div>
+    <section id="stalest" hidden>
+      <div class="mini-heading"></div>
+      <ul class="mini-list"></ul>
+    </section>
+    <div class="actions">
+      <button id="close-dupes" class="action" type="button" disabled>Close all duplicates</button>
+      <button id="discard-stale" class="action" type="button" disabled>Discard all stale</button>
+      <button id="archive-stale" class="action" type="button" disabled>Archive all stale</button>
+      <button id="open-full" class="action" type="button">Open full view</button>
+      <button id="undo" class="action" type="button" hidden>Undo</button>
+    </div>
+    <div id="status" role="status" aria-live="polite"></div>
+  </header>
+  <script src="tabs-core.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

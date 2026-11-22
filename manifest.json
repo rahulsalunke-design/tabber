@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Debt",
+  "version": "1.0.0",
+  "description": "A read-only inventory of your open tabs, grouped by domain, with duplicate cleanup.",
+  "permissions": ["tabs", "storage", "tabGroups", "bookmarks"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Tab Debt",
+    "default_popup": "popup.html"
+  }
+}
